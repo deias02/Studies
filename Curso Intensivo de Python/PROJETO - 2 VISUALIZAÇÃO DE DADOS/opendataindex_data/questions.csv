@@ -1,0 +1,36 @@
+id,site,question,questionshort,description,type,placeholder,score,config.score.weight,config.score.passValue,openquestion,icon,config.score.passAnyOption,config.short,config.options,config.includeOther,config.orderOptions,config.options.value,config.options.description,config.optionsContextKey
+open_licence,global,Is the data openly licensed/in public domain?,Openly licenced,"<p>This question measures if anyone is legally allowed to use, modify and redistribute data for any purpose. Only then data is considered truly &quot;open&quot; (see Open Definition). Answer ”Yes” if the data are openly licensed. The Open Definition provides a list of conformant licences. Answer also “Yes” if there is no open licence, but a statement that the dataset is in “public domain”. To count as public domain the dataset must not be protected by copyright, patents or similar restrictions. If you are not sure whether an open licence or public domain disclaimer is compliant with the Open Definition 2.1, seek feedback on the Open Data Index discussion forum.</p>
+",yesno,,20,20,Yes;true,true,unlock-alt,,,,,,,,
+format,global,In which formats are the data?,In an open and machine-readable format,"<p>Tell us the file formats of the data. We automatically compare them against a list of file formats that are considered machine-readable and open. A file format is called machine-readable if your computer can process, access, and modify single elements in a data file. The Index considers formats to be “open” if they can be fully processed with at least one free and open-source software tool. The source code of these format does not have to be open. Potentially these formats allow more people to use the data, because people do not need to buy specific software to open it.</p>
+",multiple,,20,20,,true,keyboard-o,true,true,XLS;PX;CSV;JSON;TSV;XML;RDF;TXT;AsciiDoc;SHP;SHX;DBF;WFS;GeoJSON;GPX;KML;KMZ;GML;GRIB2;SVG;GDB,false,true,,,
+bulk,global,Is the dataset downloadable at once?,Downloadable at once,"<p>Answer “Yes”, if you can download all data at once from the URL at which you found them. In case that downloadable data files are very large, their downloads may also be organised by month or year or broken down into sub­files. Answer “No” if if you have to do many manual steps to download the data, or if you can only retrieve very few parts of a large dataset at a time (for instance through a search interface).</p>
+",yesno,Here you can tell us more how you can retrieve the data.,15,15,Yes;true,true,copy,,,,,,,,
+timely,global,Data should be updated every {{ datasetContext.updateEvery }}: Is the data up-to-date?,Up-to-date,"<p>Please base your answer on the date at which you answer this question. Answer “No” if you cannot determine a date, or if the data are outdated.</p>
+",yesno,"Some data is updated regularly, while other data may not change for many years. If necessary, use your judgement and document the reasons for your assessment here.",15,15,Yes;true,true,clock-o,,,,,,,,
+online_free,global,Are the data available online without the need to register or request access to the data?,Publicly available,"<p>Answer “Yes”, if the data are made available by the government on a public website. Answer “No” if the data are <em>NOT</em> available online or are available online only after registering, requesting the data from a civil servant via email, completing a contact form or another similar administrative process.</p>
+",yesno,,15,15,Yes;true,true,eye,,,,,,,,
+free,global,Is the data available free of charge?,Available free of charge,,yesno,,15,15,Yes;true,true,dollar,,,,,,,,
+findable,global,How much do you agree with the following statement: “It was easy for me to find the data.”?,,,likert,,0,,,false,,,,,,,1,Do not agree at all,
+,,,,,,,,,,,,,,,,,2,Somewhat disagree,
+,,,,,,,,,,,,,,,,,3,Somewhat agree,
+,,,,,,,,,,,,,,,,,4,Strongly agree,
+findable_steps,global,Tell us the steps you took to find the data.,,"<p>Example:  I googled for the data and found the data in the first search result; I did in-depth search on single websites; etc.</p>
+",text,,0,,,false,,,,,,,,,
+licence_url,global,Please submit a URL to the open licence or to a statement that the data are in public domain.,,"<p>Public domain statements can be disclaimers, terms of use or similar texts.</p>
+",text,,0,,,false,,,,,,,,,
+collector_gov,global,Are the data collected by the government (or an official third party on behalf of the government)?,Collected by government,"<p>Answer “Yes” if the data are collected by government, or a third party officially representing government. This may be the case for state-owned-enterprises or contractors delivering public services for government.</p>
+",yesno,,0,0,Yes;true,true,file-alt,,,,,,,,
+usability,global,"Please provide an assessment of how easily the data are usable without human effort. Select 1 if extensive effort is required to make data usable, select 2 if some effort is required and select 3 if little to no effort is required.",,"<p>Data may be in a machine-readable format like an .xls spreadsheet. But they might contain unstructured information (like notes randomly written in a column). Such data often has to be cleaned to become usable. Tell us the effort it takes for you to use the data. Base your assessment on whether the data are fit for your use cases.</p>
+",likert,,0,,,false,,,,,,,1,Extensive effort is required,
+,,,,,,,,,,,,,,,,,2,Some effort is required,
+,,,,,,,,,,,,,,,,,3,Little to no effort is required,
+collector_name,global,Please provide the name of the government agency or organisation that collects the data.,,"<p>Please also submit evidence that data is collected, managed or mandated by government (e.g. by submitting the URL to a disclaimer of 
+government endorsement).</p>
+",text,,0,,,false,,,,,,,,,
+collector_non_gov,global,Please provide the reason that the data are not collected by the government.,,"<p>Please tell us why the data are not collected by your government. For instance, sometimes governments do not collect data because they have no measurement mechanisms put in place or the service is run by a private company not connected to the government.</p>
+",text,,0,,,false,,,,,,,,,
+online_otherwise,global,Are the data available online after requesting access or registering?,Controlled access,,yesno,,0,,,false,,,,,,,,,
+characteristics,global,Please confirm that the following characteristics are present in the data published online by the government:,,"<p>If you cannot find all data characteristics online, continue answering all further questions referring to the characteristics you found.</p>
+",multiple,,0,,,false,,,,,,,,,characteristics
+location,global,Where did you find the data?,,"<p>How to describe the data source: If you find data on a financial department website, please fill in: “Website of National Department of Finances”. If you found it in an API of the same department, fill in: &quot;API of National Department of Finances&quot;.</p>
+",source,,0,,,false,,,,,,,,,
