@@ -1,0 +1,48 @@
+
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# Download the webpage
+url = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0220EN-SkillsNetwork/labs/project/amazon_data_webpage.html"
+response = requests.get(url)
+html_data = response.text
+
+# Parse the HTML data using BeautifulSoup
+soup = BeautifulSoup(html_data, "html.parser")
+
+# Question 1: What is the content of the title attribute?
+title_content = soup.title.string
+print("Title attribute content:", title_content)
+
+# Extract table with historical share prices
+amazon_data = []
+
+for row in soup.find("tbody").find_all("tr"):
+    col = row.find_all("td")
+    date = col[0].text
+    Open = col[1].text
+    high = col[2].text
+    low = col[3].text
+    close = col[4].text
+    adj_close = col[5].text
+    volume = col[6].text
+    
+    amazon_data.append({"Date": date, "Open": Open, "High": high, "Low": low, "Close": close, "Adj Close": adj_close, "Volume": volume})
+
+# Create DataFrame from list of dictionaries
+amazon_df = pd.DataFrame(amazon_data)
+
+# Print out the first five rows of the amazon_data data frame
+print("First five rows of amazon_data:")
+print(amazon_df.head())
+
+# Question 2: What are the names of the columns in the data frame?
+column_names = amazon_df.columns.tolist()
+print("Column names:", column_names)
+
+# Question 3: What is the Open of the last row of the amazon_data data frame?
+last_row_open = amazon_df.iloc[-1]["Open"]
+print("Open of the last row:", last_row_open)
+
+

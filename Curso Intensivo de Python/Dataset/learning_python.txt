@@ -1,0 +1,7 @@
+Em Python podemos automatizar tarefas.
+Em Python podemos desenvolver aplicativos web.
+Em Python podemos analisar dados.
+Em Python podemos criar modelos de machine learning.
+Em Python podemos desenvolver jogos.
+Em Python podemos fazer pesquisa científica.
+Em Python podemos desenvolver interfaces gráficas.
